@@ -12,6 +12,8 @@
 		4CC203F41CD7C6500033FAA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CC203F21CD7C6500033FAA3 /* Main.storyboard */; };
 		4CC203F61CD7C6500033FAA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CC203F51CD7C6500033FAA3 /* Assets.xcassets */; };
 		4CC203F91CD7C6500033FAA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CC203F71CD7C6500033FAA3 /* LaunchScreen.storyboard */; };
+		4CC204011CD7C6810033FAA3 /* nounlist.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4CC204001CD7C6810033FAA3 /* nounlist.txt */; };
+		4CC204031CD7E8530033FAA3 /* WelcomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC204021CD7E8530033FAA3 /* WelcomeScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		4CC203F51CD7C6500033FAA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4CC203F81CD7C6500033FAA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4CC203FA1CD7C6500033FAA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CC204001CD7C6810033FAA3 /* nounlist.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = nounlist.txt; sourceTree = "<group>"; };
+		4CC204021CD7E8530033FAA3 /* WelcomeScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +59,10 @@
 			isa = PBXGroup;
 			children = (
 				4CC203EE1CD7C6500033FAA3 /* AppDelegate.swift */,
+				4CC204001CD7C6810033FAA3 /* nounlist.txt */,
 				4CC203F01CD7C6500033FAA3 /* ViewController.swift */,
 				4CC203F21CD7C6500033FAA3 /* Main.storyboard */,
+				4CC204021CD7E8530033FAA3 /* WelcomeScreen.swift */,
 				4CC203F51CD7C6500033FAA3 /* Assets.xcassets */,
 				4CC203F71CD7C6500033FAA3 /* LaunchScreen.storyboard */,
 				4CC203FA1CD7C6500033FAA3 /* Info.plist */,
@@ -125,6 +131,7 @@
 			files = (
 				4CC203F91CD7C6500033FAA3 /* LaunchScreen.storyboard in Resources */,
 				4CC203F61CD7C6500033FAA3 /* Assets.xcassets in Resources */,
+				4CC204011CD7C6810033FAA3 /* nounlist.txt in Resources */,
 				4CC203F41CD7C6500033FAA3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CC204031CD7E8530033FAA3 /* WelcomeScreen.swift in Sources */,
 				4CC203F11CD7C6500033FAA3 /* ViewController.swift in Sources */,
 				4CC203EF1CD7C6500033FAA3 /* AppDelegate.swift in Sources */,
 			);
