@@ -40,6 +40,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
     // MARK: outlets
     
+    @IBOutlet weak var shuffledWordView: UIView!
     @IBOutlet weak var shuffledWordLabel: UILabel!
     @IBOutlet weak var originalWordLabel: UILabel!
     @IBOutlet weak var wordInput: UITextField!
@@ -56,6 +57,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let level = Level(levelNumber: 1)
+        
         self.title = "Game"
         
         scoreBarButton.title = "Score: \(score)"

@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C35ADE11CD91D9200F6FEA0 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4C35ADDF1CD91D9200F6FEA0 /* DataModel.xcdatamodeld */; };
+		4C35ADE81CDA80D600F6FEA0 /* Level1.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4C35ADE71CDA80D600F6FEA0 /* Level1.plist */; };
+		4C35ADEA1CDA820F00F6FEA0 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C35ADE91CDA820F00F6FEA0 /* Level.swift */; };
+		4C35ADEF1CDA866500F6FEA0 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C35ADEE1CDA866500F6FEA0 /* GameViewController.swift */; };
+		4C35ADF21CDA885A00F6FEA0 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C35ADF11CDA885A00F6FEA0 /* GameController.swift */; };
+		4C35ADF41CDA8BB900F6FEA0 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C35ADF31CDA8BB900F6FEA0 /* Config.swift */; };
+		4C35ADF71CDA98C800F6FEA0 /* TileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C35ADF61CDA98C800F6FEA0 /* TileView.swift */; };
 		4CC203EF1CD7C6500033FAA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC203EE1CD7C6500033FAA3 /* AppDelegate.swift */; };
 		4CC203F11CD7C6500033FAA3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC203F01CD7C6500033FAA3 /* ViewController.swift */; };
 		4CC203F41CD7C6500033FAA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CC203F21CD7C6500033FAA3 /* Main.storyboard */; };
@@ -17,6 +24,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C35ADE01CD91D9200F6FEA0 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		4C35ADE71CDA80D600F6FEA0 /* Level1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Level1.plist; sourceTree = "<group>"; };
+		4C35ADE91CDA820F00F6FEA0 /* Level.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
+		4C35ADEE1CDA866500F6FEA0 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		4C35ADF11CDA885A00F6FEA0 /* GameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
+		4C35ADF31CDA8BB900F6FEA0 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		4C35ADF61CDA98C800F6FEA0 /* TileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileView.swift; sourceTree = "<group>"; };
 		4CC203EB1CD7C64F0033FAA3 /* scrabble-game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "scrabble-game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CC203EE1CD7C6500033FAA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CC203F01CD7C6500033FAA3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -39,9 +53,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C35ADE41CDA7FE200F6FEA0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4C35ADE91CDA820F00F6FEA0 /* Level.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		4C35ADEB1CDA825500F6FEA0 /* Levels */ = {
+			isa = PBXGroup;
+			children = (
+				4C35ADE71CDA80D600F6FEA0 /* Level1.plist */,
+			);
+			name = Levels;
+			sourceTree = "<group>";
+		};
+		4C35ADF01CDA884300F6FEA0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4C35ADF11CDA885A00F6FEA0 /* GameController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		4C35ADF51CDA98B600F6FEA0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4C35ADF61CDA98C800F6FEA0 /* TileView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		4CC203E21CD7C64F0033FAA3 = {
 			isa = PBXGroup;
 			children = (
+				4C35ADDF1CD91D9200F6FEA0 /* DataModel.xcdatamodeld */,
 				4CC203ED1CD7C6500033FAA3 /* scrabble-game */,
 				4CC203EC1CD7C64F0033FAA3 /* Products */,
 			);
@@ -58,6 +105,10 @@
 		4CC203ED1CD7C6500033FAA3 /* scrabble-game */ = {
 			isa = PBXGroup;
 			children = (
+				4C35ADF51CDA98B600F6FEA0 /* Views */,
+				4C35ADF01CDA884300F6FEA0 /* Controllers */,
+				4C35ADEB1CDA825500F6FEA0 /* Levels */,
+				4C35ADE41CDA7FE200F6FEA0 /* Models */,
 				4CC203EE1CD7C6500033FAA3 /* AppDelegate.swift */,
 				4CC204001CD7C6810033FAA3 /* nounlist.txt */,
 				4CC203F01CD7C6500033FAA3 /* ViewController.swift */,
@@ -66,6 +117,8 @@
 				4CC203F51CD7C6500033FAA3 /* Assets.xcassets */,
 				4CC203F71CD7C6500033FAA3 /* LaunchScreen.storyboard */,
 				4CC203FA1CD7C6500033FAA3 /* Info.plist */,
+				4C35ADEE1CDA866500F6FEA0 /* GameViewController.swift */,
+				4C35ADF31CDA8BB900F6FEA0 /* Config.swift */,
 			);
 			path = "scrabble-game";
 			sourceTree = "<group>";
@@ -130,6 +183,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CC203F91CD7C6500033FAA3 /* LaunchScreen.storyboard in Resources */,
+				4C35ADE81CDA80D600F6FEA0 /* Level1.plist in Resources */,
 				4CC203F61CD7C6500033FAA3 /* Assets.xcassets in Resources */,
 				4CC204011CD7C6810033FAA3 /* nounlist.txt in Resources */,
 				4CC203F41CD7C6500033FAA3 /* Main.storyboard in Resources */,
@@ -144,8 +198,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CC204031CD7E8530033FAA3 /* WelcomeScreen.swift in Sources */,
+				4C35ADE11CD91D9200F6FEA0 /* DataModel.xcdatamodeld in Sources */,
 				4CC203F11CD7C6500033FAA3 /* ViewController.swift in Sources */,
+				4C35ADEA1CDA820F00F6FEA0 /* Level.swift in Sources */,
+				4C35ADF71CDA98C800F6FEA0 /* TileView.swift in Sources */,
+				4C35ADEF1CDA866500F6FEA0 /* GameViewController.swift in Sources */,
+				4C35ADF41CDA8BB900F6FEA0 /* Config.swift in Sources */,
 				4CC203EF1CD7C6500033FAA3 /* AppDelegate.swift in Sources */,
+				4C35ADF21CDA885A00F6FEA0 /* GameController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +318,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "scrabble-game/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "dk.martynasj.scrabble-game";
@@ -269,6 +330,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "scrabble-game/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "dk.martynasj.scrabble-game";
@@ -295,8 +357,22 @@
 				4CC203FF1CD7C6500033FAA3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4C35ADDF1CD91D9200F6FEA0 /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4C35ADE01CD91D9200F6FEA0 /* DataModel.xcdatamodel */,
+			);
+			currentVersion = 4C35ADE01CD91D9200F6FEA0 /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 4CC203E31CD7C64F0033FAA3 /* Project object */;
 }
