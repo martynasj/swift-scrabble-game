@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import Foundation
 
-class TileView: UIImageView {
+class TileView: UILabel {
     
     var letter: Character
     
@@ -16,28 +17,22 @@ class TileView: UIImageView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    init(letter: Character, size: CGFloat) {
-
-        let image = UIImage(named: "tile")
+    init(letter: Character) {
         self.letter = letter
-        super.init(image: image)
-
-        self.frame = CGRect(x: 100, y: 100, width: size, height: size)
-        self.image = image
         
-        // Children of this view will not be visible outside the frame
-//        self.clipsToBounds = true
+        let frame = CGRectMake(0, 0, 0, 0)
+        super.init(frame: frame)
         
-        let labelFrame = CGRect(x: 0, y: 0, width: size, height: size)
-        let labelView = UILabel(frame: labelFrame)
-        labelView.text = String(self.letter)
-        labelView.textColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
-        labelView.textAlignment = .Center
-        labelView.adjustsFontSizeToFitWidth = true
-        self.addSubview(labelView)
+        self.heightAnchor.constraintEqualToConstant(40.0).active = true
+        
+        self.text = String(letter)
+        self.font = TILE_FONT
+        self.textAlignment = .Center
+        self.adjustsFontSizeToFitWidth = true
+        self.textColor = COLORS.tileText
+        self.backgroundColor = UIColor.brownColor()
         
     }
-    
     
     
 }

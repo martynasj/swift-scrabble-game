@@ -18,18 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="500" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3wp-gX-06M" userLabel="Tiles">
-                                <rect key="frame" x="20" y="243" width="627" height="80"/>
-                            </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="02 : 30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Gc-0r-S4V">
-                                <rect key="frame" x="306" y="53" width="55" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="500" distribution="fillEqually" alignment="center" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Eig-5h-MyZ" userLabel="Targets">
-                                <rect key="frame" x="20" y="131" width="627" height="80"/>
-                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ku8-Yw-ZMd">
                                 <rect key="frame" x="20" y="49" width="41" height="30"/>
                                 <state key="normal" title="Finish"/>
@@ -53,35 +41,59 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="500" distribution="fillProportionally" alignment="center" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="kmE-Ih-4ZD" userLabel="Tiles">
+                                <rect key="frame" x="20" y="231" width="627" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="yex-wk-XU8"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="500" distribution="fillEqually" alignment="center" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Eig-5h-MyZ" userLabel="Targets">
+                                <rect key="frame" x="20" y="114" width="627" height="80"/>
+                                <color key="backgroundColor" red="1" green="0.93825896125664787" blue="0.66595432157128998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="t1p-Z3-Bti"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k1X-Sl-bTV">
+                                <rect key="frame" x="310" y="260" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="70c-cs-wuz"/>
+                                </constraints>
+                                <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="resetWord:" destination="wPp-2v-dmL" eventType="touchUpInside" id="kc5-lE-Dpb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Ku8-Yw-ZMd" firstAttribute="leading" secondItem="Eig-5h-MyZ" secondAttribute="leading" id="6eA-df-atd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kmE-Ih-4ZD" secondAttribute="trailing" id="1Pm-b4-gAK"/>
+                            <constraint firstItem="k1X-Sl-bTV" firstAttribute="centerX" secondItem="qzG-g3-cam" secondAttribute="centerX" id="3Mi-oY-Fpc"/>
                             <constraint firstItem="64e-Tp-Ees" firstAttribute="leading" secondItem="Ku8-Yw-ZMd" secondAttribute="trailing" constant="27" id="6mF-zW-W39"/>
                             <constraint firstItem="2XO-cx-d7l" firstAttribute="trailing" secondItem="qzG-g3-cam" secondAttribute="trailingMargin" id="6pQ-vd-a1A"/>
                             <constraint firstItem="Ku8-Yw-ZMd" firstAttribute="leading" secondItem="qzG-g3-cam" secondAttribute="leadingMargin" id="AHC-Lb-E9P"/>
-                            <constraint firstItem="Eig-5h-MyZ" firstAttribute="leading" secondItem="3wp-gX-06M" secondAttribute="leading" id="CUg-TF-uFJ"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Eig-5h-MyZ" secondAttribute="leading" id="CBP-0g-oPA"/>
+                            <constraint firstItem="kmE-Ih-4ZD" firstAttribute="top" secondItem="Eig-5h-MyZ" secondAttribute="bottom" constant="37" id="Dxq-Qq-9Ds"/>
                             <constraint firstItem="Ku8-Yw-ZMd" firstAttribute="top" secondItem="XMc-f9-iEm" secondAttribute="bottom" constant="29" id="FB1-s5-hJT"/>
-                            <constraint firstItem="8Gc-0r-S4V" firstAttribute="centerX" secondItem="Eig-5h-MyZ" secondAttribute="centerX" id="LGO-xu-mVc"/>
-                            <constraint firstItem="Eig-5h-MyZ" firstAttribute="top" secondItem="Ku8-Yw-ZMd" secondAttribute="bottom" constant="52" id="LoI-bi-Ysc"/>
-                            <constraint firstItem="3wp-gX-06M" firstAttribute="top" secondItem="Eig-5h-MyZ" secondAttribute="bottom" constant="32" id="QWX-5W-Mxs"/>
+                            <constraint firstItem="qea-TU-naa" firstAttribute="top" secondItem="XMc-f9-iEm" secondAttribute="bottom" constant="33" id="FSh-6v-pM5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Eig-5h-MyZ" secondAttribute="trailing" id="GOr-6c-UBT"/>
+                            <constraint firstItem="k1X-Sl-bTV" firstAttribute="top" secondItem="Eig-5h-MyZ" secondAttribute="bottom" constant="66" id="SrP-W9-mpi"/>
                             <constraint firstItem="qea-TU-naa" firstAttribute="baseline" secondItem="2XO-cx-d7l" secondAttribute="baseline" id="ZnN-NA-Cfo"/>
                             <constraint firstItem="Ku8-Yw-ZMd" firstAttribute="baseline" secondItem="64e-Tp-Ees" secondAttribute="baseline" id="e5I-1l-8tV"/>
                             <constraint firstItem="2XO-cx-d7l" firstAttribute="leading" secondItem="qea-TU-naa" secondAttribute="trailing" constant="8" symbolic="YES" id="ewF-F9-YgK"/>
-                            <constraint firstItem="2XO-cx-d7l" firstAttribute="trailing" secondItem="Eig-5h-MyZ" secondAttribute="trailing" id="gIa-nL-Aqt"/>
-                            <constraint firstItem="64e-Tp-Ees" firstAttribute="baseline" secondItem="8Gc-0r-S4V" secondAttribute="baseline" id="iMk-VD-dgw"/>
-                            <constraint firstItem="2IZ-0O-VOD" firstAttribute="top" secondItem="3wp-gX-06M" secondAttribute="bottom" constant="52" id="jKn-wL-eLl"/>
                             <constraint firstItem="Ku8-Yw-ZMd" firstAttribute="top" secondItem="64e-Tp-Ees" secondAttribute="top" id="kO0-jA-7A6"/>
-                            <constraint firstItem="8Gc-0r-S4V" firstAttribute="baseline" secondItem="qea-TU-naa" secondAttribute="baseline" id="nCh-D3-Cle"/>
-                            <constraint firstItem="3wp-gX-06M" firstAttribute="top" secondItem="qzG-g3-cam" secondAttribute="top" constant="243" id="nOV-cd-tgb"/>
-                            <constraint firstItem="Eig-5h-MyZ" firstAttribute="trailing" secondItem="3wp-gX-06M" secondAttribute="trailing" id="zFp-Vx-iQB"/>
+                            <constraint firstItem="Eig-5h-MyZ" firstAttribute="top" secondItem="XMc-f9-iEm" secondAttribute="bottom" constant="94" id="sai-F3-vJq"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="kmE-Ih-4ZD" secondAttribute="leading" id="tB7-02-ROH"/>
+                            <constraint firstItem="2XO-cx-d7l" firstAttribute="top" secondItem="XMc-f9-iEm" secondAttribute="bottom" constant="33" id="zyV-1Z-vZv"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="iuV-KQ-n4f"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="stackView" destination="3wp-gX-06M" id="bnC-da-RYY"/>
+                        <outlet property="resetButton" destination="k1X-Sl-bTV" id="Pn7-gW-wx6"/>
+                        <outlet property="stackView" destination="kmE-Ih-4ZD" id="GT0-bp-J6H"/>
+                        <outlet property="targetStackView" destination="Eig-5h-MyZ" id="wpM-to-NLC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n45-Sv-edP" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -17,3 +17,15 @@ private let screenRect = UIScreen.mainScreen().bounds
 let screenWidth = screenRect.width
 let screenHeight = screenRect.height
 let tileMargin = 7.0 as CGFloat
+
+// MARK: colors, images
+
+// tuple with named keys
+let COLORS = (
+    tileText: UIColor(hex: "#ffffff"),
+    timer: UIColor.blackColor()
+)
+
+let TILE_FONT = UIFont(name: "Verdana-Bold", size: 40.0)
+let BACKGROUND_IMAGE = UIImage(named: "wood-background")
+let TILE_BACKGROUND = UIImage(named: "tile")

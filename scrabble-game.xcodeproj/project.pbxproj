@@ -14,6 +14,8 @@
 		4C35ADF21CDA885A00F6FEA0 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C35ADF11CDA885A00F6FEA0 /* GameController.swift */; };
 		4C35ADF41CDA8BB900F6FEA0 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C35ADF31CDA8BB900F6FEA0 /* Config.swift */; };
 		4C35ADF71CDA98C800F6FEA0 /* TileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C35ADF61CDA98C800F6FEA0 /* TileView.swift */; };
+		4C44D1EA1CDF5DCA006A0E6D /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C44D1E91CDF5DCA006A0E6D /* ColorExtension.swift */; };
+		4C44D1EC1CDF637B006A0E6D /* TargetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C44D1EB1CDF637B006A0E6D /* TargetView.swift */; };
 		4CC203EF1CD7C6500033FAA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC203EE1CD7C6500033FAA3 /* AppDelegate.swift */; };
 		4CC203F41CD7C6500033FAA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CC203F21CD7C6500033FAA3 /* Main.storyboard */; };
 		4CC203F61CD7C6500033FAA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CC203F51CD7C6500033FAA3 /* Assets.xcassets */; };
@@ -29,6 +31,8 @@
 		4C35ADF11CDA885A00F6FEA0 /* GameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
 		4C35ADF31CDA8BB900F6FEA0 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		4C35ADF61CDA98C800F6FEA0 /* TileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileView.swift; sourceTree = "<group>"; };
+		4C44D1E91CDF5DCA006A0E6D /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		4C44D1EB1CDF637B006A0E6D /* TargetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetView.swift; sourceTree = "<group>"; };
 		4CC203EB1CD7C64F0033FAA3 /* scrabble-game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "scrabble-game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CC203EE1CD7C6500033FAA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CC203F31CD7C6500033FAA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -77,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				4C35ADF61CDA98C800F6FEA0 /* TileView.swift */,
+				4C44D1EB1CDF637B006A0E6D /* TargetView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -113,6 +118,7 @@
 				4CC203FA1CD7C6500033FAA3 /* Info.plist */,
 				4C35ADEE1CDA866500F6FEA0 /* GameViewController.swift */,
 				4C35ADF31CDA8BB900F6FEA0 /* Config.swift */,
+				4C44D1E91CDF5DCA006A0E6D /* ColorExtension.swift */,
 			);
 			path = "scrabble-game";
 			sourceTree = "<group>";
@@ -193,6 +199,8 @@
 				4CC204031CD7E8530033FAA3 /* WelcomeScreen.swift in Sources */,
 				4C35ADE11CD91D9200F6FEA0 /* DataModel.xcdatamodeld in Sources */,
 				4C35ADEA1CDA820F00F6FEA0 /* Level.swift in Sources */,
+				4C44D1EC1CDF637B006A0E6D /* TargetView.swift in Sources */,
+				4C44D1EA1CDF5DCA006A0E6D /* ColorExtension.swift in Sources */,
 				4C35ADF71CDA98C800F6FEA0 /* TileView.swift in Sources */,
 				4C35ADEF1CDA866500F6FEA0 /* GameViewController.swift in Sources */,
 				4C35ADF41CDA8BB900F6FEA0 /* Config.swift in Sources */,
