@@ -9,16 +9,23 @@
 import UIKit
 
 class GameViewController: UIViewController {
-
+    
+    @IBOutlet weak var stackView: UIStackView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Level: 1"
         
         let level1 = Level(levelNumber: 1)
+        
         let gameController = GameController()
         gameController.level = level1
+        gameController.wordStack = stackView
+        gameController.dealRandomWord()
         
-        self.view.addSubview(gameController.gameView)
+//        stackView.addArrangedSubview(gameController.tiles[0])
+//        self.view.addSubview(gameController.gameView)
+        
         
     }
 

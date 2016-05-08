@@ -9,9 +9,11 @@
 import Foundation
 import UIKit
 
+private let screenRect = UIScreen.mainScreen().bounds
+
 
 // MARK: constants
 
-private let screenRect = UIScreen.mainScreen().bounds
 let screenWidth = screenRect.width
 let screenHeight = screenRect.height
+let tileMargin = 7.0 as CGFloat
