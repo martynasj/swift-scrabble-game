@@ -28,5 +28,5 @@ let COLORS = (
 )
 
 let TILE_FONT = UIFont(name: "Verdana-Bold", size: 40.0)
-let BACKGROUND_IMAGE = UIImage(named: "wood-background")
+let BACKGROUND_COLOR = UIColor(patternImage: UIImage(named: "wood-background")!)
 let TILE_BACKGROUND = UIImage(named: "tile")

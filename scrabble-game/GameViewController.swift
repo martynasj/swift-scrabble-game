@@ -11,26 +11,28 @@ import UIKit
 class GameViewController: UIViewController {
     
     @IBOutlet weak var targetStackView: UIStackView!
-    @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var resetButton: UIButton!
     @IBOutlet weak var currentWordNumber: UILabel!
     @IBOutlet weak var totalWordsInLevel: UILabel!
     @IBOutlet weak var levelNumber: UILabel!
+    @IBOutlet weak var tileView: UIView!
     
     var gameController: GameController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = BACKGROUND_COLOR
         self.title = "Level: 1"
         self.resetButton.hidden = true
-        
+    }
+    
+    // If I use another lifecycle method, I get incorrect view frame sizes
+    override func viewDidAppear(animated: Bool) {
         let level1 = Level(levelNumber: 1)
-        
-        self.gameController = GameController(wordStackView: stackView, targetStackView: targetStackView)
+        self.gameController = GameController(tileView: tileView, targetStackView: targetStackView)
         self.gameController.gameView = self
         self.gameController.level = level1
         self.gameController.dealWord()
-        
     }
     
     // Cannot have this button in GameController, why???

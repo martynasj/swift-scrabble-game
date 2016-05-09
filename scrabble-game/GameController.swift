@@ -14,14 +14,14 @@ class GameController {
     var word: String!
     var wordNumber = 0
     var guessNumber = 0
-    let wordStack: UIStackView
+    let tileView: UIView
     let targetStack: UIStackView
     var gameView: GameViewController!
     
     let color1 = UIColor(red: 0.2, green: 0.2, blue: 0.2, alpha: 0.2)
     
-    init(wordStackView: UIStackView, targetStackView: UIStackView) {
-        self.wordStack = wordStackView
+    init(tileView: UIView, targetStackView: UIStackView) {
+        self.tileView = tileView
         self.targetStack = targetStackView
     }
     
@@ -29,22 +29,44 @@ class GameController {
         self.word = level.words[wordNumber]
         
         for (index, letter) in word.characters.enumerate() {
-            let tile = makeTileButton(letter, tag: index)
+            let tile = makeTileButton(letter, index: index)
             let target = TargetView(correctLetter: letter)
 
-            wordStack.addArrangedSubview(tile)
+            tileView.addSubview(tile)
             targetStack.addArrangedSubview(target)
 
         }
 
     }
     
-    func makeTileButton(letter: Character, tag: Int) -> UIButton {
+    func makeTileButton(letter: Character, index: Int) -> UIButton {
         let button = UIButton(type: .System)
-        button.tag = tag
-        button.setTitle(String(letter), forState: .Normal)
+        
+        let containerWidht = tileView.frame.size.width
+        let margin: CGFloat = 12.0
+        
+        let tileSize = (containerWidht - CGFloat(word.characters.count - 1) * margin) / CGFloat(word.characters.count)
+        let firstOffset = tileSize / 2
+        let tileOffset = CGFloat(index) * (tileSize + margin) + firstOffset
+        
+        let yOffset = tileView.frame.size.height / 2
+        
+        button.frame = CGRectMake(0, 0, tileSize, tileSize)
+        button.center = CGPoint(x: tileOffset, y: yOffset)
+        
+        button.layer.cornerRadius = 10.0
+        button.layer.borderWidth = 2.0
+        button.layer.borderColor = UIColor.blackColor().CGColor
+        
+        button.layer.shadowOpacity = 0.7
+        button.layer.shadowColor = UIColor.blackColor().CGColor
+        
+        button.setTitleColor(COLORS.tileText, forState: .Normal)
+        button.titleLabel!.font = TILE_FONT
+            
+        button.tag = index
+        button.setTitle(String(letter).uppercaseString, forState: .Normal)
         button.backgroundColor = COLORS.tileBackground
-        button.titleLabel?.textColor = COLORS.tileText
         button.addTarget(nil, action: #selector(GameViewController.tilePressed(_:)), forControlEvents: .TouchUpInside)
         return button
     }
