@@ -20,7 +20,7 @@
 		4CC203F41CD7C6500033FAA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CC203F21CD7C6500033FAA3 /* Main.storyboard */; };
 		4CC203F61CD7C6500033FAA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CC203F51CD7C6500033FAA3 /* Assets.xcassets */; };
 		4CC204011CD7C6810033FAA3 /* nounlist.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4CC204001CD7C6810033FAA3 /* nounlist.txt */; };
-		4CC204031CD7E8530033FAA3 /* WelcomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC204021CD7E8530033FAA3 /* WelcomeScreen.swift */; };
+		4CC204031CD7E8530033FAA3 /* WelcomeScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC204021CD7E8530033FAA3 /* WelcomeScreenController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +39,7 @@
 		4CC203F51CD7C6500033FAA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4CC203FA1CD7C6500033FAA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CC204001CD7C6810033FAA3 /* nounlist.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = nounlist.txt; sourceTree = "<group>"; };
-		4CC204021CD7E8530033FAA3 /* WelcomeScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeScreen.swift; sourceTree = "<group>"; };
+		4CC204021CD7E8530033FAA3 /* WelcomeScreenController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeScreenController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +72,8 @@
 		4C35ADF01CDA884300F6FEA0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				4CC204021CD7E8530033FAA3 /* WelcomeScreenController.swift */,
+				4C35ADEE1CDA866500F6FEA0 /* GameViewController.swift */,
 				4C35ADF11CDA885A00F6FEA0 /* GameController.swift */,
 			);
 			name = Controllers;
@@ -113,10 +115,8 @@
 				4CC203EE1CD7C6500033FAA3 /* AppDelegate.swift */,
 				4CC204001CD7C6810033FAA3 /* nounlist.txt */,
 				4CC203F21CD7C6500033FAA3 /* Main.storyboard */,
-				4CC204021CD7E8530033FAA3 /* WelcomeScreen.swift */,
 				4CC203F51CD7C6500033FAA3 /* Assets.xcassets */,
 				4CC203FA1CD7C6500033FAA3 /* Info.plist */,
-				4C35ADEE1CDA866500F6FEA0 /* GameViewController.swift */,
 				4C35ADF31CDA8BB900F6FEA0 /* Config.swift */,
 				4C44D1E91CDF5DCA006A0E6D /* ColorExtension.swift */,
 			);
@@ -196,7 +196,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CC204031CD7E8530033FAA3 /* WelcomeScreen.swift in Sources */,
+				4CC204031CD7E8530033FAA3 /* WelcomeScreenController.swift in Sources */,
 				4C35ADE11CD91D9200F6FEA0 /* DataModel.xcdatamodeld in Sources */,
 				4C35ADEA1CDA820F00F6FEA0 /* Level.swift in Sources */,
 				4C44D1EC1CDF637B006A0E6D /* TargetView.swift in Sources */,

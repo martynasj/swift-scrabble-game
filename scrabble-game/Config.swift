@@ -23,7 +23,8 @@ let tileMargin = 7.0 as CGFloat
 // tuple with named keys
 let COLORS = (
     tileText: UIColor(hex: "#ffffff"),
-    timer: UIColor.blackColor()
+    timer: UIColor.blackColor(),
+    tileBackground: UIColor(hex: "#33001a")
 )
 
 let TILE_FONT = UIFont(name: "Verdana-Bold", size: 40.0)

@@ -30,7 +30,7 @@ class TileView: UILabel {
         self.textAlignment = .Center
         self.adjustsFontSizeToFitWidth = true
         self.textColor = COLORS.tileText
-        self.backgroundColor = UIColor.brownColor()
+        self.backgroundColor = COLORS.tileBackground
         
     }
     

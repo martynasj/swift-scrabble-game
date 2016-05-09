@@ -12,6 +12,7 @@ class GameController {
     
     var level: Level!
     var word: String!
+    var wordNumber = 0
     var guessNumber = 0
     let wordStack: UIStackView
     let targetStack: UIStackView
@@ -24,8 +25,8 @@ class GameController {
         self.targetStack = targetStackView
     }
     
-    func dealRandomWord() {
-        self.word = level.words[0]
+    func dealWord() {
+        self.word = level.words[wordNumber]
         
         for (index, letter) in word.characters.enumerate() {
             let tile = makeTileButton(letter, tag: index)
@@ -42,7 +43,8 @@ class GameController {
         let button = UIButton(type: .System)
         button.tag = tag
         button.setTitle(String(letter), forState: .Normal)
-        button.backgroundColor = UIColor.brownColor()
+        button.backgroundColor = COLORS.tileBackground
+        button.titleLabel?.textColor = COLORS.tileText
         button.addTarget(nil, action: #selector(GameViewController.tilePressed(_:)), forControlEvents: .TouchUpInside)
         return button
     }
@@ -63,7 +65,9 @@ class GameController {
         // Last guess, check win
         if guessNumber == word.characters.count {
             if isWin() {
-                print("word matched!")
+                wordNumber += 1
+                resetWord()
+                dealWord()
             } else {
                 gameView.resetButton.hidden = false
             }
@@ -86,7 +90,6 @@ class GameController {
         for target in targetStack.subviews {
             target.removeFromSuperview()
         }
-        self.dealRandomWord()
     }
     
     
