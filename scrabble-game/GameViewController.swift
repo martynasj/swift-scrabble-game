@@ -10,12 +10,12 @@ import UIKit
 
 class GameViewController: UIViewController {
     
-    @IBOutlet weak var targetStackView: UIStackView!
     @IBOutlet weak var resetButton: UIButton!
     @IBOutlet weak var currentWordNumber: UILabel!
     @IBOutlet weak var totalWordsInLevel: UILabel!
     @IBOutlet weak var levelNumber: UILabel!
     @IBOutlet weak var tileView: UIView!
+    @IBOutlet weak var targetView: UIView!
     
     var gameController: GameController!
     
@@ -29,7 +29,8 @@ class GameViewController: UIViewController {
     // If I use another lifecycle method, I get incorrect view frame sizes
     override func viewDidAppear(animated: Bool) {
         let level1 = Level(levelNumber: 1)
-        self.gameController = GameController(tileView: tileView, targetStackView: targetStackView)
+        
+        self.gameController = GameController(tileView: tileView, targetView: targetView)
         self.gameController.gameView = self
         self.gameController.level = level1
         self.gameController.dealWord()

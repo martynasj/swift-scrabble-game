@@ -16,7 +16,10 @@ private let screenRect = UIScreen.mainScreen().bounds
 
 let screenWidth = screenRect.width
 let screenHeight = screenRect.height
-let tileMargin = 7.0 as CGFloat
+var CONTAINER_WIDTH: CGFloat!
+var CONTAINER_HEIGHT: CGFloat!
+var TILE_SIZE: CGFloat!
+let TILE_MARGIN = 12.0 as CGFloat
 
 // MARK: colors, images
 
@@ -24,7 +27,8 @@ let tileMargin = 7.0 as CGFloat
 let COLORS = (
     tileText: UIColor(hex: "#ffffff"),
     timer: UIColor.blackColor(),
-    tileBackground: UIColor(hex: "#33001a")
+    tileBackground: UIColor(patternImage: UIImage(named: "tile")!),
+    TARGET_BACKGROUND: UIColor(hex: "#33001a")
 )
 
 let TILE_FONT = UIFont(name: "Verdana-Bold", size: 40.0)

@@ -17,27 +17,30 @@ class TargetView: UILabel {
             if newValue == correctLetter {
                 self.isMatched = true
                 self.text = String(newValue!)
+                print("correct")
             } else {
+                print("incorrect")
                 self.text = String(newValue!)
             }
         }
     }
 
     init(correctLetter: Character) {
-
         self.correctLetter = correctLetter
         
-        let frame = CGRectMake(0, 0, 40, 40)
+        let frame = CGRectMake(0, 0, TILE_SIZE, TILE_SIZE)
         super.init(frame: frame)
+        
+        self.layer.cornerRadius = 10.0
+        self.layer.borderWidth = 4.0
+        self.layer.borderColor = UIColor.blackColor().CGColor
+        self.layer.backgroundColor = COLORS.TARGET_BACKGROUND.CGColor
         
         self.text = nil
         self.font = TILE_FONT
         self.textAlignment = .Center
         self.adjustsFontSizeToFitWidth = true
         self.textColor = COLORS.tileText
-        self.backgroundColor = UIColor.blueColor()
-        
-        self.heightAnchor.constraintEqualToConstant(40).active = true
         
     }
     

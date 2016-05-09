@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GameplayKit
 
 class GameController {
     
@@ -15,48 +16,53 @@ class GameController {
     var wordNumber = 0
     var guessNumber = 0
     let tileView: UIView
-    let targetStack: UIStackView
+    let targetView: UIView
     var gameView: GameViewController!
     
     let color1 = UIColor(red: 0.2, green: 0.2, blue: 0.2, alpha: 0.2)
     
-    init(tileView: UIView, targetStackView: UIStackView) {
+    init(tileView: UIView, targetView: UIView) {
         self.tileView = tileView
-        self.targetStack = targetStackView
+        self.targetView = targetView
+        
+        // Set config constants
+        CONTAINER_WIDTH = tileView.frame.size.width
+        CONTAINER_HEIGHT = tileView.frame.size.height
     }
     
     func dealWord() {
-        self.word = level.words[wordNumber]
+        self.word = level.words[wordNumber].uppercaseString
+        
+        // Update constants
+        TILE_SIZE = (CONTAINER_WIDTH - CGFloat(word.characters.count - 1) * TILE_MARGIN) / CGFloat(word.characters.count)
+        
+        
+        let wordLetterArray = self.word.characters.map { (letter) -> String in return String(letter) }
+
+        let shuffledWord = GKRandomSource.sharedRandom().arrayByShufflingObjectsInArray(wordLetterArray) as! [String]
         
         for (index, letter) in word.characters.enumerate() {
-            let tile = makeTileButton(letter, index: index)
             let target = TargetView(correctLetter: letter)
-
+            target.center = calculateCenter(index)
+            
+            targetView.addSubview(target)
+        }
+        
+        for (index, letter) in shuffledWord.enumerate() {
+            print(letter)
+            let tile = makeTileButton(letter, index: index)
+            tile.center = calculateCenter(index)
             tileView.addSubview(tile)
-            targetStack.addArrangedSubview(target)
-
         }
 
     }
     
-    func makeTileButton(letter: Character, index: Int) -> UIButton {
+    func makeTileButton(letter: String, index: Int) -> UIButton {
         let button = UIButton(type: .System)
         
-        let containerWidht = tileView.frame.size.width
-        let margin: CGFloat = 12.0
-        
-        let tileSize = (containerWidht - CGFloat(word.characters.count - 1) * margin) / CGFloat(word.characters.count)
-        let firstOffset = tileSize / 2
-        let tileOffset = CGFloat(index) * (tileSize + margin) + firstOffset
-        
-        let yOffset = tileView.frame.size.height / 2
-        
-        button.frame = CGRectMake(0, 0, tileSize, tileSize)
-        button.center = CGPoint(x: tileOffset, y: yOffset)
+        button.frame = CGRectMake(0, 0, TILE_SIZE, TILE_SIZE)
         
         button.layer.cornerRadius = 10.0
-        button.layer.borderWidth = 2.0
-        button.layer.borderColor = UIColor.blackColor().CGColor
         
         button.layer.shadowOpacity = 0.7
         button.layer.shadowColor = UIColor.blackColor().CGColor
@@ -64,21 +70,28 @@ class GameController {
         button.setTitleColor(COLORS.tileText, forState: .Normal)
         button.titleLabel!.font = TILE_FONT
             
-        button.tag = index
+//        button.tag = index
         button.setTitle(String(letter).uppercaseString, forState: .Normal)
         button.backgroundColor = COLORS.tileBackground
         button.addTarget(nil, action: #selector(GameViewController.tilePressed(_:)), forControlEvents: .TouchUpInside)
         return button
     }
     
+    func calculateCenter(index: Int) -> CGPoint {
+        let firstOffset = TILE_SIZE / 2
+        let tileOffset = CGFloat(index) * (TILE_SIZE + TILE_MARGIN) + firstOffset
+        
+        let yOffset = CONTAINER_HEIGHT / 2
+    
+        return CGPoint(x: tileOffset, y: yOffset)
+    }
+    
     
     func guessLetter(button: UIButton!) {
         let letter = Character(button.titleLabel!.text!)
-        let targets = targetStack.subviews as! [TargetView]
+        let targets = targetView.subviews as! [TargetView]
         
         if guessNumber < word.characters.count {
-            print(guessNumber)
-            print(word.characters.count)
             targets[guessNumber].userGuessLetter = letter
             button.removeFromSuperview()
             guessNumber += 1
@@ -98,7 +111,7 @@ class GameController {
     }
     
     func isWin() -> Bool {
-        for target in targetStack.subviews as! [TargetView] {
+        for target in targetView.subviews as! [TargetView] {
             if !target.isMatched {
                 return false
             }
@@ -109,7 +122,7 @@ class GameController {
     func resetWord() {
         self.guessNumber = 0
         gameView.resetButton.hidden = true
-        for target in targetStack.subviews {
+        for target in targetView.subviews {
             target.removeFromSuperview()
         }
     }

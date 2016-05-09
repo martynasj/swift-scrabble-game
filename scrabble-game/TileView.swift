@@ -17,11 +17,13 @@ class TileView: UILabel {
         fatalError("init(coder:) has not been implemented")
     }
     
-    init(letter: Character) {
+    init(letter: Character, frame: CGRect) {
         self.letter = letter
-        
-        let frame = CGRectMake(0, 0, 0, 0)
+
         super.init(frame: frame)
+        
+
+
         
         self.heightAnchor.constraintEqualToConstant(40.0).active = true
         
